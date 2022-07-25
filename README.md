@@ -3,8 +3,8 @@ Build ECommerce Website Like Amazon by Next.js
 
 ## Tasks
  
-10. Add MaterialUI Theme
-    1.  create theme
-    2.  use theme provider
-    3.  add h1 and h2 styles
-    4.  set theme colors
+Create Application Context
+    1.  define context and reducer
+    2.  set darkMode flag
+    3.  create store provider
+    4.  use it on layout
