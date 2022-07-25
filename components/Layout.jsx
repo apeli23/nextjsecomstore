@@ -11,12 +11,13 @@ import {
 } from "@mui/material";
 import useStyles from "../utils/styles";
 
-export default function Layout({ children }) {
+export default function Layout({ title, description, children }) {
     const classes = useStyles();
     return (
         <div>
             <Head>
-                <title>ecommerce</title>
+                <title>{title ? `${title} - Next Amazona` : 'Next Amazona'}</title>
+                {description && <meta name="description" content={description}></meta>}
             </Head>
             <AppBar position='static' className={classes.navbar}>
 
@@ -38,7 +39,7 @@ export default function Layout({ children }) {
             </AppBar>
             <Container className={classes.main}>{children}</Container>
             <footer className={classes.footer}>
-                <Typography>All rights reserved. Nextjs Amazon</Typography>
+                <Typography>All rights reserved. Nextjs Amazon by Brian Apeli</Typography>
             </footer>
         </div>
     )
