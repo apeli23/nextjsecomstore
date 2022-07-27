@@ -2,9 +2,8 @@
 Build ECommerce Website Like Amazon by Next.js
 
 ## Tasks
- 
-Create Application Context
-    1.  define context and reducer
-    2.  set darkMode flag
-    3.  create store provider
-    4.  use it on layout
+Connect To MongoDB
+    1.  install mongodb
+    2.  install mongoose
+    3.  define connect and disconnect 
+    4.  use it in the api

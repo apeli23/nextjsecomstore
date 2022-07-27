@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import Head from "next/head";
-import data from "../utils/data";
 import NextLink from "next/link";
 import {
     AppBar,

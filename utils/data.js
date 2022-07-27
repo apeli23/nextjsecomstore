@@ -56,7 +56,6 @@ const data = {
         brand: 'Zara',
         slug: 'fit-pants',
         rating: 4.5,
-        rating: 4.5,
         numReviews: 10,
         countInStock: 20,
         description: 'A popular pants',
