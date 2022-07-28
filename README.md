@@ -2,8 +2,8 @@
 Build ECommerce Website Like Amazon by Next.js
 
 ## Tasks
-Connect To MongoDB
-    1.  install mongodb
-    2.  install mongoose
-    3.  define connect and disconnect 
-    4.  use it in the api
+Create Products API
+    1.  create product model
+    2.  seed sample data
+    3.  create /api/products/index.js
+    4.  create product api

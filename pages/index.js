@@ -7,14 +7,14 @@ import {
   CardMedia,
   CardContent,
   Typography,
-  CardActions,
-  Button,
+  // CardActions,
+  // Button,
 } from '@mui/material';
 import data from '../utils/data';
-import { ClassNames } from "@emotion/react";
+// import { ClassNames } from "@emotion/react";
 import useStyles from "../utils/styles"
 
-export default function Home({ children }) {
+export default function Home() {
   const classes = useStyles();
   return (
     <Layout>
