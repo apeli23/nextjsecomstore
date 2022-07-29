@@ -10,17 +10,20 @@ import {
   // CardActions,
   // Button,
 } from '@mui/material';
-import data from '../utils/data';
+// import data from '../utils/data';
 // import { ClassNames } from "@emotion/react";
 import useStyles from "../utils/styles"
+import db from "../utils/db";
+import Product from "../models/Product";
 
-export default function Home() {
+export default function Home(props) {
   const classes = useStyles();
+  const { products } = props;
   return (
     <Layout>
       <h1>products</h1>
       <Grid container spacing={3}>
-        {data.products.map((product) => (
+        {products.map((product) => (
           <Grid item md={4} key={product.name}>
             <Card >
               <NextLink href={`/product/${product.slug}`} passHref>
@@ -42,4 +45,15 @@ export default function Home() {
       </Grid>
     </Layout>
   )
+}
+
+export async function getServerSideProps() {
+  await db.connect();
+  const products = await Product.find({}).lean();
+  await db.disconnect();
+  return {
+    props: {
+      products: products.map(db.convertDocToObj),
+    },
+  };
 }
